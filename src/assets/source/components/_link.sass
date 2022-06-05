@@ -1,4 +1,5 @@
 %generalLink
+  margin: 8px 0
   font-family: $fontPrimary
   font-size: 14px
   font-weight: $fontWeightBold
@@ -8,17 +9,17 @@
 
 a.link
   padding: 8px 16px
-  @extend %generalLink
   color: lighten($neutralDarkGrayishViolet, 16)
+  @extend %generalLink
+
   &:hover
     color: lighten($neutralVeryDarkViolet, 8)
 
 nav.navbar a.link-primary
-  margin-left: 24px
   padding: 8px 32px
-  @extend %generalLink
   color: lighten($neutralVeryDarkViolet, 8)
   border: 2px solid lighten($neutralVeryDarkViolet, 8)
+  @extend %generalLink
 
   &:hover
     background-color: lighten($neutralVeryDarkViolet, 8)

@@ -4,7 +4,39 @@
 nav.navbar
     width: 100vw
     height: 80px
-    padding: 0 120px
+    padding: 0 24px
+    background-color: $neutralVeryLightGray
     display: flex
     justify-content: space-between
     align-items: center
+
+    z-index: 1
+
+img.toggleOn-ocult
+    display: none
+
+img.toggleOff-ocult
+    display: none
+
+
+nav.navbar div.links
+    width: 100vw
+    padding: 24px 0 32px
+    background-color: darken($neutralVeryLightGray, 8)
+    
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    position: absolute
+
+    top: -120%
+    left: 0
+
+    transition: top 2s, easy-in
+
+    z-index: -1
+
+    &-show
+        top: 80px

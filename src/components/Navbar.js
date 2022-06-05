@@ -2,14 +2,29 @@ import { useState } from 'react';
 // Route
 import Logo from '../assets/images/logo.svg';
 import iconHamburger from '../assets/images/icon-hamburger.svg';
+import iconClose from '../assets/images/icon-close.svg'
 // Personal Components
 import Link from './tokens/Link';
 
 function Navbar() {
+  
   const [isToggle, setIsToggle] = useState(0);
-
+  const toggleOn = document.querySelector('img.toggleOn');
+  const toggleOff = document.querySelector('img.toggleOff');
+  const navMenu = document.querySelector('div.links')
+  
   const toggleMenu = () => {
+    setIsToggle(!isToggle);
 
+    if (!isToggle) {    
+      toggleOn.classList.toggle('toggleOn-ocult');
+      toggleOff.classList.toggle('toggleOff-ocult');
+      navMenu.classList.toggle('links-show')
+    } else {
+      toggleOn.classList.toggle('toggleOn-ocult');
+      toggleOff.classList.toggle('toggleOff-ocult');
+      navMenu.classList.toggle('links-show')
+    }
   };
 
   return (
@@ -18,10 +33,19 @@ function Navbar() {
         src={Logo}
         alt='insure logo' />
 
-      <img
-        src={iconHamburger}
-        alt='hamburger icon' 
-        onClick={toggleMenu}/>
+      <div className='toggleContainer'>
+        <img
+          className='toggleOn'
+          src={iconHamburger}
+          alt='hamburger icon' 
+          onClick={toggleMenu} />
+
+        <img
+          className='toggleOff toggleOff-ocult'
+          src={iconClose}
+          alt='hamburger icon' 
+          onClick={toggleMenu} />
+      </div>
 
       <div className='links'>
         <Link 

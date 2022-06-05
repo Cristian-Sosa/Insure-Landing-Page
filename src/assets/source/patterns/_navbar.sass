@@ -2,41 +2,48 @@
 @import '../components/_link'
 
 nav.navbar
-    width: 100vw
-    height: 80px
-    padding: 0 24px
-    background-color: $neutralVeryLightGray
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-    z-index: 1
+  width: 100vw
+  height: 80px
+  padding: 0 24px
+  background-color: $neutralVeryLightGray
+  display: flex
+  justify-content: space-between
+  align-items: center
+  z-index: 1
 
 img.toggleOn-ocult
-    display: none
+  display: none
 
 img.toggleOff-ocult
-    display: none
-
+  display: none
 
 nav.navbar div.links
-    width: 100vw
-    padding: 24px 0 32px
-    background-color: darken($neutralVeryLightGray, 8)
-    
-    display: flex
-    flex-direction: column
-    justify-content: flex-start
-    align-items: center
+  width: 100vw
+  padding: 24px 0 32px
+  background-color: darken($neutralVeryLightGray, 8)
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  position: absolute
+  top: -120%
+  left: 0
+  transition: top 2s, easy-in
+  z-index: -1
+  &-show
+    top: 80px
 
-    position: absolute
-
-    top: -120%
-    left: 0
-
-    transition: top 2s, easy-in
-
-    z-index: -1
-
-    &-show
-        top: 80px
+// Querys
+@media only screen and (min-width: 1050px)
+  nav.navbar
+    padding: 0 120px
+  nav.navbar div.links
+    width: auto
+    background-color: $neutralVeryLightGray
+    display: initial
+    position: static
+    z-index: 1
+    a.link-primary
+      margin-left: 32px
+  div.toggleContainer
+    display: none

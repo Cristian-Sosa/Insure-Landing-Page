@@ -7,5 +7,4 @@ function Link({ textLink, primary, redirection }) {
     </a>
   )
 }
-
 export default Link;

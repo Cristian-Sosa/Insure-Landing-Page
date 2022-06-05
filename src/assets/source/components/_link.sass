@@ -5,6 +5,9 @@
 
   text-decoration: none
 
+  transition: color .3s, background .3s, easy-out
+
+
 a.link
   padding: 8px 16px
 
@@ -12,8 +15,11 @@ a.link
 
   color: lighten($neutralDarkGrayishViolet, 16)
 
+  &:hover
+    color: lighten($neutralVeryDarkViolet, 8)
 
-a.link-primary
+
+nav.navbar a.link-primary
   margin-left: 24px
   padding: 8px 32px
 
@@ -22,3 +28,7 @@ a.link-primary
   color: lighten($neutralVeryDarkViolet, 8)
 
   border: 2px solid lighten($neutralVeryDarkViolet, 8)
+
+  &:hover
+    background-color: lighten($neutralVeryDarkViolet, 8)
+    color: $neutralVeryLightGray

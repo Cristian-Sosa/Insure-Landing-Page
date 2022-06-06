@@ -1,13 +1,16 @@
 $imageBannerDesktop: '../images/image-intro-desktop.jpg'
-$svgBannerLeft: '../images/bg-pattern-intro-left-mobile.svg'
-$svgBannerRight: '../images/bg-pattern-intro-right-mobile.svg'
+$imageBannerMobile: '../images/image-intro-mobile.jpg'
+$svgBannerLeftMobile: '../images/bg-pattern-intro-left-mobile.svg'
+$svgBannerRightMobile: '../images/bg-pattern-intro-right-mobile.svg'
+$svgBannerLeftDesktop: '../images/bg-pattern-intro-left-desktop.svg'
+$svgBannerRightDesktop: '../images/bg-pattern-intro-right-desktop.svg'
 
 header.banner
   width: 100vw
   height: 240vw
 
   background-color: $primaryDarkViolet
-  background-image: url(#{$svgBannerRight}), url(#{$svgBannerLeft})
+  background-image: url(#{$svgBannerRightMobile}), url(#{$svgBannerLeftMobile})
   background-repeat: no-repeat
   background-position: right 135%, 0 120vw
 
@@ -47,8 +50,41 @@ div.bannerContainer
 figure.bannerImage
   width: 100vw
   height: 120vw
-  background-image: url(#{$imageBannerDesktop})
+  background-image: url(#{$imageBannerMobile})
   background-repeat: no-repeat
   background-size: contain
 
   object-fit: fill
+
+@media only screen and (min-width: 1050px)
+  header.banner
+    height: 450px
+    padding: 60px 120px
+    
+    background-color: $primaryDarkViolet
+    background-image: url(#{$svgBannerRightDesktop}), url(#{$svgBannerLeftDesktop})
+    background-repeat: no-repeat
+    background-position: right top, left -500%
+    
+    flex-direction: row
+
+  figure.bannerImage
+    width: 432px
+    height: 520px
+    background-image: url(#{$imageBannerDesktop})
+    position: relative
+
+  div.bannerContainer
+    width: 40%
+    height: 100%
+    padding: 0
+
+    color: white
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    .bannerTitle, .bannerDescription
+      text-align: left

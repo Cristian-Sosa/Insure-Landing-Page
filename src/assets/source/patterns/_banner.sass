@@ -1,0 +1,54 @@
+$imageBannerDesktop: '../images/image-intro-desktop.jpg'
+$svgBannerLeft: '../images/bg-pattern-intro-left-mobile.svg'
+$svgBannerRight: '../images/bg-pattern-intro-right-mobile.svg'
+
+header.banner
+  width: 100vw
+  height: 240vw
+
+  background-color: $primaryDarkViolet
+  background-image: url(#{$svgBannerRight}), url(#{$svgBannerLeft})
+  background-repeat: no-repeat
+  background-position: right 135%, 0 120vw
+
+  display: flex
+  flex-direction: column-reverse
+  justify-content: space-between
+  align-items: flex-start
+
+div.bannerContainer
+  width: 100vw
+  height: 119vw
+
+  padding: 80px 30px 0
+
+  color: white
+
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  .bannerTitle
+    margin-bottom: 16px
+    font-family: $fontSecondary
+    font-size: 48px
+    text-align: center
+    color: darken($neutralVeryLightGray, 2)
+
+  .bannerDescription
+    margin-bottom: 24px
+    font-size: 18px
+    font-weight: $fontWeightRegular
+    text-align: center
+    line-height: 32px
+    color: darken($neutralVeryLightGray, 16)
+
+figure.bannerImage
+  width: 100vw
+  height: 120vw
+  background-image: url(#{$imageBannerDesktop})
+  background-repeat: no-repeat
+  background-size: contain
+
+  object-fit: fill

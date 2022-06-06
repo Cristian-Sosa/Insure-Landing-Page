@@ -10,7 +10,7 @@ nav.navbar
   display: flex
   justify-content: space-between
   align-items: center
-  z-index: 1
+  z-index: 2
 
 img.toggleOn-ocult
   display: none
@@ -27,17 +27,18 @@ nav.navbar div.links
   justify-content: flex-start
   align-items: center
   position: absolute
-  top: -120%
-  left: 0
-  transition: top 2s, easy-in
-  z-index: -1
+  top: 80px
+  left: -120%
+  transition: left 1.2s, easy-in
+  z-index: 1
   &-show
-    top: 80px
+    left: 0
 
 // Querys
 @media only screen and (min-width: 1050px)
   nav.navbar
     padding: 0 120px
+    flex-direction: row-reverse
   nav.navbar div.links
     width: auto
     background-color: $neutralVeryLightGray

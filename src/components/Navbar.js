@@ -30,6 +30,26 @@ function Navbar() {
 
   return (
     <nav className='navbar'>
+      <div className='links'>
+        <Link 
+          textLink='How we work'
+          primary={false} 
+          redirection='/how-we-work' />
+        <Link 
+          textLink='Blog'
+          primary={false}
+          redirection='/blog' />
+        <Link 
+          textLink='Account'
+          primary={false}
+          redirection='/account' />
+
+        <Button 
+          textLink='View plans'
+          primary={true}
+          redirection='/plans' />
+      </div>
+      
       <img
         src={Logo}
         alt='insure logo' />
@@ -46,26 +66,6 @@ function Navbar() {
           src={iconClose}
           alt='hamburger icon' 
           onClick={toggleMenu} />
-      </div>
-
-      <div className='links'>
-        <Link 
-          textLink='How we work'
-          primary={false} 
-          redirection='/how-we-work' />
-        <Link 
-          textLink='Blog'
-          primary={false}
-          redirection='blog' />
-        <Link 
-          textLink='Account'
-          primary={false}
-          redirection='account' />
-
-        <Button 
-          textLink='View plans'
-          primary={true}
-          redirection='plans' />
       </div>
     </nav>
   );

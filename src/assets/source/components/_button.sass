@@ -1,0 +1,21 @@
+%generalButton
+  margin: 8px 0
+  font-family: $fontPrimary
+  font-size: 14px
+  font-weight: $fontWeightBold
+  text-decoration: none
+  transition: color .3s, background .3s, easy-out
+  cursor: pointer
+
+a.btn
+  padding: 8px 32px
+  @extend %generalButton
+  &-primary
+    color: lighten($neutralVeryDarkViolet, 8)
+    border: 2px solid lighten($neutralVeryDarkViolet, 8)
+  &:hover
+    background-color: lighten($neutralVeryDarkViolet, 8)
+    color: $neutralVeryLightGray
+
+nav.navbar a.btn-primary
+  margin-left: 24px

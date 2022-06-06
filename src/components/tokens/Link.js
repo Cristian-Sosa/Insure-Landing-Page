@@ -1,7 +1,7 @@
 function Link({ textLink, primary, redirection }) {
   return ( 
     <a 
-      className={`${primary ? "link-primary" : "link"}`}
+      className='link'
       href={redirection}>
       {textLink.toUpperCase()}
     </a>

@@ -5,6 +5,7 @@ import iconHamburger from '../assets/images/icon-hamburger.svg';
 import iconClose from '../assets/images/icon-close.svg'
 // Personal Components
 import Link from './tokens/Link';
+import Button from './tokens/Button'
 
 function Navbar() {
   
@@ -61,7 +62,7 @@ function Navbar() {
           primary={false}
           redirection='account' />
 
-        <Link 
+        <Button 
           textLink='View plans'
           primary={true}
           redirection='plans' />
